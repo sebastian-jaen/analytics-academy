@@ -537,3 +537,105 @@ button#create-account-btn{
   text-align: center;
   margin: 40px 0 20px;
 }
+.booking-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+/* Center the consultation block */
+.consultation-section {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 600px;
+}
+.booking{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Modal overlay */
+.modal {
+  display: none;                      /* start hidden */
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);                    /* for centering content */
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal box */
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  text-align: left;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Form fields */
+#consultation-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+#consultation-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  box-sizing: border-box;
+}
+.btn-link{  
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #007acc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn-link:hover {
+  background-color: #005f99;
+}
+.dashboard{
+  text-align: center;
+  font-size: x-large;
+}
+.pyPractice{
+  text-align: center;
+  font-size: x-large;
+}
+.pyPracticeExplain{
+  text-align: center;
+  font-size: large;
+}
+.comingSoonList{
+  list-style-position: inside;
+  padding: 0;
+  margin: 1.5rem auto;
+  max-width: 600px;
+  text-align:left;
+  font-size: large;
+}
+.why-us{
+  text-align: center;
+  font-size: medium;
+}

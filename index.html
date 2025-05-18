@@ -16,50 +16,102 @@
       <a href="quiz.html">Quizzes</a>
       <a href="pyPractice.html">Python Practice (soon!)</a>
       <a href="dashboard.html">Dashboard</a>
-      <a href="resources.html">Resources</a>
       <a href="team.html">Meet the Team</a>
     </nav>
   </header>
-<body>
-    <div id="login-container" class="login-container" style="display: none;">
-  <h2>Login</h2>
-  <form id="login-form">
-    <input type="text" id="username" placeholder="Username" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button type="submit">Log In</button>
-  </form>
 
-  <button type="button" id="create-account-btn" class="btn-secondary">
-    Create an Account
-  </button>
-  <p id="login-message"></p>
-</div>
+<body>
+  <div id="login-container" class="login-container" style="display: none;">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Log In</button>
+    </form>
+
+    <button type="button" id="create-account-btn" class="btn-secondary">
+      Create an Account
+    </button>
+      <p id="login-message"></p>
+  </div>
 
   <main>
+
     <section class="hero">
       <h2>Build Your Data Superpowers</h2>
       <p>Master analytics and statistics through interactive learning and real-world practice.</p>
       <a href="module.html" class="cta-button">Start Learning</a>
     </section>
- <section class="dual-grid container">
-    <!-- Left column: your three feature cards -->
-    <div class="col-left">
-      <div class="card">
-        <h3>Subscription Plans</h3>
-        <p>Choose the plan that fits your learning pace and budget.</p>
-        <a href="pricing.html" class="btn btn-secondary">View Plans</a>
-      </div>
-      <div class="card">
-        <h3>📢 New Modules Coming Soon</h3>
-        <ul>
-          <li>Data Visualization &amp; Dashboarding with Power BI</li>
-          <li>SQL Essentials</li>
-          <li>Predictive Modeling with Machine Learning in Python</li>
-        </ul>
+
+    <section class="why-us">
+      <h2>Why this platform?</h2>
+      <p>With the rising demand for data literacy in almost every industry, Analytics Academy fills a critical gap by providing a focused, beginner-friendly, and affordable solution.</p> 
+      <p>The platform bridges the bap between theory and practice, helping the users acquire practical skills that can be immediately applied in the workplace.</p>
+    </section>
+    <section class="booking">
+      <h3>Book a Free 30-Minute Consultation</h2>
+      <p>Schedule a session with our experts to discuss your learning path.</p>
+      <a href="#consult" id="open-consultation" class="btn-link">Book Now</a>
+    </section>
+
+    <div id="consultation-modal" class="modal">
+      <div class="modal-content">
+        <button = type="button" class="close-btn" id="close-consultation">&times;</button>
+        <h3>Consultation Request</h3>
+        <form id="consultation-form">
+          <label>
+            Name<br>
+            <input type="text" name="name" required>
+          </label>
+          <label>
+            Email<br>
+            <input type="email" name="email" required>
+          </label>
+          <label>
+            Occupation<br>
+            <textarea name="message" rows="1" required></textarea>
+          </label>
+          <label>
+            Industry<br>
+            <select name="industry" required>
+              <option value="tech">Tech</option>
+              <option value="finance">Finance</option>
+              <option value="healthcare">Healthcare</option>
+              <option value="education">Education</option>
+              <option value="other">Other</option>
+          </label>
+          <label>
+            Reason for Consultation<br>
+            <textarea name="message" rows="4" required></textarea>
+          </label>
+          <label>
+            Preferred Date & Time<br>
+            <input type="datetime-local" name="datetime" required>
+          </label>
+          <button type="submit" class="btn-primary">Submit</button>
+        </form>
       </div>
     </div>
 
-    <!-- Right column: your three info cards -->
+    <section class="dual-grid container">
+
+        <div class="col-left">
+          <div class="card">
+            <h3>Subscription Plans</h3>
+            <p>Choose the plan that fits your learning pace and budget.</p>
+            <a href="pricing.html" class="btn btn-secondary">View Plans</a>
+          </div>
+          <div class="card">
+            <h3>📢 New Modules Coming Soon</h3>
+            <ul>
+              <li>Data Visualization &amp; Dashboarding with Power BI</li>
+              <li>SQL Essentials</li>
+              <li>Predictive Modeling with Machine Learning in Python</li>
+            </ul>
+          </div>
+        </div>
+
+
     <div class="col-right">
       <div class="card">
         <h2>About Us</h2>
@@ -69,7 +121,7 @@
       <div class="card">
         <h2>Meet the Team</h2>
         <p>Get to know our instructors and community leads behind Analytics Academy.</p>
-        <a href="team.html" class="btn btn-secondary">Get Introduced</a>
+        <a href="team.html" class="btn btn-secondary">Get to Know the Faces Behind the Scenes</a>
       </div>
     </div>
   </section>
@@ -80,14 +132,12 @@
   © 2025 Analytics Academy — Built for lifelong learners
 </footer>
   <script>
-    // Toggle login box on click
     document.querySelector("a[href='#login']").addEventListener("click", function (e) {
       e.preventDefault();
       const loginBox = document.getElementById("login-container");
       loginBox.style.display = loginBox.style.display === "none" ? "block" : "none";
     });
 
-    // Handle form submission
     document.getElementById("login-form").addEventListener("submit", function (e) {
       e.preventDefault();
 
@@ -107,13 +157,9 @@
       }
     });
   </script>
-
-</body>
-
-
-
+  
   <script>
-    // Toggle panels
+
     const loginPanel  = document.getElementById('login-container');
     const signupPanel = document.getElementById('signup-container');
 
@@ -133,10 +179,10 @@
         clearMessages();
       });
 
-    // Signup form handler…
+
     document.getElementById('signup-form')
       .addEventListener('submit', function(e) {
-        /* … your signup logic … */
+
       });
 
     function clearMessages() {
@@ -145,5 +191,24 @@
     }
   </script>
 <script src="auth.js"></script>
+<script>
+  const openBtn  = document.getElementById('open-consultation');
+  const closeBtn = document.getElementById('close-consultation');
+  const modal    = document.getElementById('consultation-modal');
+
+  openBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
+</script>
 </body>
 </html>
+

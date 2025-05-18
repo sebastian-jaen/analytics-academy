@@ -22,7 +22,7 @@ function showQuestion(idx) {
   block.className = 'quiz-question';
   block.innerHTML = `<h3>${idx+1}. ${q.question}</h3>`;
   q.options.forEach((opt, i) => {
-    // Check if userAnswers[idx] matches this option (1-based)
+
     const checked = (userAnswers[idx] === (i+1)) ? 'checked' : '';
     block.innerHTML += `
       <label>
@@ -32,13 +32,13 @@ function showQuestion(idx) {
   });
   container.appendChild(block);
 
-  // Controls
+
   document.getElementById('prev-btn').disabled = idx === 0;
   document.getElementById('next-btn').style.display = idx === quizData.length-1 ? 'none' : 'inline-block';
   document.getElementById('submit-btn').style.display = idx === quizData.length-1 ? 'inline-block' : 'none';
 }
 
-// Next / Prev
+
 document.getElementById('next-btn').addEventListener('click', () => {
   saveAnswer();
   currentQuestion++;
@@ -50,7 +50,7 @@ document.getElementById('prev-btn').addEventListener('click', () => {
   showQuestion(currentQuestion);
 });
 
-// Submit
+
 document.getElementById('submit-btn').addEventListener('click', () => {
   saveAnswer();
   let score = 0;
@@ -79,14 +79,14 @@ document.getElementById('submit-btn').addEventListener('click', () => {
   document.getElementById('result-container').innerHTML =
     `<h3>You scored ${score} out of ${quizData.length}.</h3><hr>` + resultHTML;
 
-  // Optional: disable navigation/buttons after submission
+
   document.getElementById('next-btn').disabled = true;
   document.getElementById('prev-btn').disabled = true;
   document.getElementById('submit-btn').disabled = true;
   document.getElementById('retry-btn').style.display = 'inline-block';
   document.getElementById('retry-btn').addEventListener('click', () => {
     currentQuestion = 0;
-    userAnswers = [];  // Reset user answers
+    userAnswers = []; 
     showQuestion(currentQuestion);
     document.getElementById('result-container').innerHTML = '';
     document.getElementById('next-btn').disabled = false;
@@ -100,7 +100,7 @@ function saveAnswer() {
   const radios = document.querySelectorAll(`input[name="q${currentQuestion}"]`);
   radios.forEach(radio => {
     if(radio.checked) {
-      userAnswers[currentQuestion] = parseInt(radio.value);  // Store 1-based answer
+      userAnswers[currentQuestion] = parseInt(radio.value);  
     }
   });
 }
