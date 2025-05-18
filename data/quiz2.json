@@ -1,0 +1,65 @@
+{
+  "title": "Module 2 Quiz: Foundations of EDA in Python",
+  "questions": [
+    {
+      "question": "Which library is commonly used in Python for data manipulation and analysis?",
+      "options": [
+        "matplotlib",
+        "seaborn",
+        "pandas",
+        "scipy"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What does the following line of code do?\n\n<span class='function'>print</span>(df.head())",
+      "options": [
+        "Prints the last 5 rows of the dataframe",
+        "Prints the column names only",
+        "Prints the first 5 rows of the dataframe",
+        "Prints summary statistics"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "How do you check for missing values in a pandas DataFrame named <code>df</code>?",
+      "options": [
+        "<span class='function'>print</span>(df.dropna())",
+        "<span class='function'>print</span>(df.isnull().sum())",
+        "<span class='function'>print</span>(df.info())",
+        "<span class='function'>print</span>(df.fillna(0))"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which code creates a histogram of the column 'price' in the DataFrame <code>df</code>?",
+      "options": [
+        "df['price'].plot(kind='line')",
+        "df['price'].mean()",
+        "df['price'].hist()",
+        "df['price'].describe()"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "Which method gives you summary statistics for all numeric columns in <code>df</code>?",
+      "options": [
+        "df.info()",
+        "df.head()",
+        "df.describe()",
+        "df.columns"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "What is the correct way to import the matplotlib plotting library?",
+      "options": [
+        "<span class='keyword'>import</span> matplotlib",
+        "<span class='keyword'>import</span> matplotlib.pyplot <span class='keyword'>as</span> plt",
+        "<span class='keyword'>from</span> pandas <span class='keyword'>import</span> plotting",
+        "<span class='keyword'>import</span> numpy <span class='keyword'>as</span> np"
+      ],
+      "answer": 2
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "title": "Module 1 Quiz: Introduction to Analytics",
+  "questions": [
+    {
+      "question": "What does Business Analytics help organizations do?",
+      "options": [
+        "Make guesses based on gut feeling",
+        "Understand trends and improve performance",
+        "Reduce data collection",
+        "Eliminate human decision-making"
+      ],
+      "answer": 2
+    },
+    {
+      "question": "Which type of analytics answers 'Why did it happen?'",
+      "options": ["Descriptive","Diagnostic","Predictive","Prescriptive"],
+      "answer": 2
+    },
+    {
+      "question": "Which analytics type forecasts what will happen?",
+      "options": ["Descriptive","Diagnostic","Predictive","Prescriptive"],
+      "answer": 3
+    },
+    {
+      "question": "What is the first step when a client has unstructured data?",
+      "options": [
+        "Ignore the data",
+        "Perform prescriptive analytics",
+        "Summarize with descriptive analytics",
+        "Ask client to keep handwritten notes"
+      ],
+      "answer": 3
+    },
+    {
+      "question": "A logistics company sees unexpected high sales in off-season. Which analytics do you use?",
+      "options": ["Descriptive","Diagnostic","Predictive","Prescriptive"],
+      "answer": 2
+    },
+    {
+      "question": "To estimate holiday demand for inventory, you should use:",
+      "options": ["Diagnostic","Descriptive","Predictive","Prescriptive"],
+      "answer": 3
+    }
+  ]
+}

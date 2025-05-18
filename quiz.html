@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <header>
+    <h1 id="quiz-title">Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="module.html">Back to Module</a>
+      <a href="quiz.html?quiz=1">Module 1 Quiz</a>
+      <a href="quiz.html?quiz=2">Module 2 Quiz</a>
+    </nav>
+  </header>
+
+  <main class="quiz-wrapper">
+    <div id="question-container"></div>
+
+    <div id="quiz-controls">
+      <button id="prev-btn" disabled>← Previous</button>
+      <button id="next-btn">Next →</button>
+      <button id="submit-btn" style="display:none">Submit Quiz</button>
+    </div>
+
+    <div id="result-container"></div>
+    <button id="retry-btn" style="display:none; margin: 24px auto 0 auto; display: block;">Try Again</button>
+
+  </main>
+
+  <script src="assets/js/quiz.js"></script>
+</body>
+</html>

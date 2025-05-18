@@ -41,9 +41,15 @@ fetch(jsonPath)
       tocLink.href = `#${sectionId}`;
       tocLink.textContent = section.heading;
       tocLink.classList.add("toc-link");
-
       toc.appendChild(tocLink);
     });
+    // Add the quiz link at the end of the ToC
+const quizLink = document.createElement("a");
+quizLink.href = "quiz.html"; // Link to your quiz page
+quizLink.textContent = "Take the Quiz";
+quizLink.className = 'toc-quiz-link';
+toc.appendChild(quizLink);
+
   })
   .catch(error => {
     console.error("Error loading module:", error);
