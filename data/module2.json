@@ -1,0 +1,33 @@
+{
+  "title": "Module 2: Foundations of EDA in Python for Analytics",
+  "sections": [
+    {
+      "heading": "What is EDA?",
+      "content": "Exploratory Data Analysis (EDA) is the process of examining, summarizing, and visualizing a dataset to understand its structure and key patterns before formal modeling. It helps answer questions like: <ul><li>What does the data look like?</li><li>Are there missing values?</li><li>Are there outliers?</li><li>What trends or relationships can we spot?</li></ul>"
+    },
+    {
+      "heading": "Why Python is Great for EDA",
+      "content": "Python is a top choice for data analysis because of its simplicity and powerful libraries. It allows analysts to work with data quickly and efficiently. Key libraries include:<ul><li><code>pandas</code> – for loading and manipulating data</li><li><code>numpy</code> – for numerical operations</li><li><code>matplotlib</code> – for creating visualizations</li><li><code>seaborn</code> – for more advanced statistical plots</li></ul>"
+    },
+    {
+      "heading": "Loading and Exploring a Dataset",
+      "content": "Start your analysis by loading the dataset and previewing its structure:<pre><code class='language-python'>import pandas as pd\n\ndf = pd.read_csv(\"sales.csv\")\nprint(df.head())</code></pre><p>This loads a dataset and shows the first 5 rows so you can get a quick glance at the data structure.</p>"
+    },
+    {
+      "heading": "Basic EDA Calculations",
+      "content": "Once your dataset is loaded, you can perform basic calculations to understand it:<pre><code class='language-python'>print(df.describe())\nprint(\"Missing values:\\n\", df.isnull().sum())\nprint(\"Mean price:\", df[\"price\"].mean())\nprint(\"Median price:\", df[\"price\"].median())\nprint(\"Mode of category:\", df[\"category\"].mode()[0])\nprint(\"Standard deviation:\", df[\"price\"].std())\nprint(\"Min:\", df[\"price\"].min(), \"Max:\", df[\"price\"].max())\nprint(\"Unique categories:\", df[\"category\"].nunique())</code></pre>"
+    },
+    {
+      "heading": "Visual EDA with Matplotlib",
+      "content": "Charts and visualizations help reveal patterns and outliers that numbers alone may miss:<pre><code class='language-python'>import matplotlib.pyplot as plt\n\n# Line chart of monthly sales\ndf[\"sales\"].plot(title=\"Monthly Sales\")\nplt.ylabel(\"Sales\")\nplt.show()\n\n# Histogram of prices\ndf[\"price\"].hist(bins=10)\nplt.title(\"Price Distribution\")\nplt.xlabel(\"Price\")\nplt.show()</code></pre>"
+    },
+    {
+      "heading": "Common EDA Patterns to Watch For",
+      "content": "<ul><li><strong>Outliers:</strong> Values that are unusually high or low</li><li><strong>Missing Data:</strong> Gaps that need cleaning or imputing</li><li><strong>Skewness:</strong> Distributions that are not balanced</li><li><strong>Correlations:</strong> Variables that move together</li><li><strong>Duplicates:</strong> Repeated rows that may affect analysis</li></ul>"
+    },
+    {
+      "heading": "Reflection",
+      "content": "<p>Imagine you're working with a retail company's customer dataset. What are the first three things you'd check using EDA before building any dashboard or making recommendations? Write your thoughts and how Python can help you do it efficiently.</p>"
+    }
+  ]
+}
