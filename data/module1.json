@@ -15,7 +15,28 @@
     },
     {
       "heading": "Benefits of Analytics Over Experience",
-      "content": "<ul><li><strong>Objectivity:</strong> Data is evidence-based</li><li><strong>Scale:</strong> Can analyze massive datasets</li><li><strong>Precision:</strong> Reduces guesswork</li></ul><h4>Reflection</h4><p>Think of a decision you’ve made based only on experience. What would you do differently with data?</p>"
+      "content": "<ul><li><strong>Objectivity:</strong> Data is evidence-based</li><li><strong>Scale:</strong> Can analyze massive datasets</li><li><strong>Precision:</strong> Reduces guesswork</li></ul>"
+    },
+    {
+      "heading": "Analytics Lifecycle/Process",
+      "content": "<ol><li>Define the problem (business question & KPI)</li><li>Data acquisition (sources, collection methods)</li><li>Process & prep data (cleaning, transformation)</li><li>Analyze data & interpret results (visualizations, summary stats)</li></li><li>Communicate findings (build an executive summary or slide deck tailored to stakeholders; tell the 'data story')</li></ol>"
+    },
+    {
+      "heading": "Key Roles & Skills in Analytics",
+      "content": "<ul><li><strong>Data Analyst:</strong> Focuses on interpreting data and providing actionable insights.</li><li><strong>Data Scientist:</strong> Combines programming, statistics, and domain knowledge to extract insights from data.</li><li><strong>Business Intelligence Analyst:</strong> Uses data visualization tools to present data in a way that is easy to understand.</li></ul>"
+    },
+    {
+      "heading": "Tools & Technologies",
+      "content": "<ul><li><strong>Excel:</strong> Basic data analysis and visualization</li><li><strong>SQL:</strong> Database querying</li><li><strong>Python/R:</strong> Advanced analytics and machine learning</li><li><strong>Tableau/Power BI:</strong> Data visualization</li></ul>"
+    },
+    {
+      "heading": "Common Challenges in Analytics",
+      "content": "<ul><li>Data quality issues</li><li>Integration of data from multiple sources</li><li>Stakeholder buy-in</li><li>Resistance to change within the organization</li><li>Understanding the business context</li><li>Ethics & privacy</li></ul>"
+    },
+    {
+      "heading": "Reflection",
+      "content": "<p>Think about a business problem you've encountered. How could analytics have changed the outcome? Write down your thoughts.</p>"
     }
+
   ]
 }

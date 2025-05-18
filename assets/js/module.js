@@ -4,7 +4,7 @@ const moduleNumber = queryParams.get("module") || "1";  // Default to 1 if not p
 const jsonPath = `data/module${moduleNumber}.json`;
 
 fetch(jsonPath)
-  .then(response => response.json())
+  .then(response => response.json()) 
   .then(data => {
     // Set the module title
     document.getElementById("module-title").textContent = data.title;
@@ -44,11 +44,11 @@ fetch(jsonPath)
       toc.appendChild(tocLink);
     });
     // Add the quiz link at the end of the ToC
-const quizLink = document.createElement("a");
-quizLink.href = "quiz.html"; // Link to your quiz page
-quizLink.textContent = "Take the Quiz";
-quizLink.className = 'toc-quiz-link';
-toc.appendChild(quizLink);
+    const quizLink = document.createElement("a");
+    quizLink.href = 'quiz.html?module=${moduleNumber}'; // Link to your quiz page
+    quizLink.textContent = "Take the Quiz";
+    quizLink.className = 'toc-quiz-link';
+    toc.appendChild(quizLink);
 
   })
   .catch(error => {

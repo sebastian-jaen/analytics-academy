@@ -11,14 +11,28 @@
     <h1 id="quiz-title">Quiz</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="module.html">Back to Module</a>
-      <a href="quiz.html?quiz=1">Module 1 Quiz</a>
-      <a href="quiz.html?quiz=2">Module 2 Quiz</a>
+      <a href="module.html">Back to Modules</a>
     </nav>
   </header>
+  <div class="layout">
+  <aside id="sidebar">
+    <nav>
+      <ul>
+        <li><a href="quiz.html?quiz=1">Module 1 Quiz</a></li>
+        <li><a href="quiz.html?quiz=2">Module 2 Quiz</a></li>
+        <li class="divider"></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </aside> 
 
+  <div class="main-content">
+    <h2>Test Your Knowledge</h2>
+    <p>Answer the questions below to assess your understanding of the material.</p>
   <main class="quiz-wrapper">
-    <div id="question-container"></div>
+    <div id="question-container">
+    </div>
+    </div>
 
     <div id="quiz-controls">
       <button id="prev-btn" disabled>← Previous</button>

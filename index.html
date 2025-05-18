@@ -6,7 +6,6 @@
   <title>Analytics Academy</title>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
 
   <header>
     <h1>📊 Analytics Academy</h1>
@@ -14,11 +13,27 @@
       <a href="index.html">Home</a>
       <a href="#login">Login</a>
       <a href="module.html">Modules</a>
-      <a href="quiz.html">Quiz</a>
+      <a href="quiz.html">Quizzes</a>
+      <a href="pyPractice.html">Python Practice (soon!)</a>
       <a href="dashboard.html">Dashboard</a>
-
+      <a href="resources.html">Resources</a>
+      <a href="team.html">Meet the Team</a>
     </nav>
   </header>
+<body>
+    <div id="login-container" class="login-container" style="display: none;">
+  <h2>Login</h2>
+  <form id="login-form">
+    <input type="text" id="username" placeholder="Username" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button type="submit">Log In</button>
+  </form>
+
+  <button type="button" id="create-account-btn" class="btn-secondary">
+    Create an Account
+  </button>
+  <p id="login-message"></p>
+</div>
 
   <main>
     <section class="hero">
@@ -26,51 +41,109 @@
       <p>Master analytics and statistics through interactive learning and real-world practice.</p>
       <a href="module.html" class="cta-button">Start Learning</a>
     </section>
+ <section class="dual-grid container">
+    <!-- Left column: your three feature cards -->
+    <div class="col-left">
+      <div class="card">
+        <h3>Subscription Plans</h3>
+        <p>Choose the plan that fits your learning pace and budget.</p>
+        <a href="pricing.html" class="btn btn-secondary">View Plans</a>
+      </div>
+      <div class="card">
+        <h3>📢 New Modules Coming Soon</h3>
+        <ul>
+          <li>Data Visualization &amp; Dashboarding with Power BI</li>
+          <li>SQL Essentials</li>
+          <li>Predictive Modeling with Machine Learning in Python</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right column: your three info cards -->
+    <div class="col-right">
+      <div class="card">
+        <h2>About Us</h2>
+        <p>Analytics Academy is on a mission to democratize data skills for everyone. Join our global community of data-driven problem solvers.</p>
+        <a href="about.html" class="btn btn-secondary">Read Our Story</a>
+      </div>
+      <div class="card">
+        <h2>Meet the Team</h2>
+        <p>Get to know our instructors and community leads behind Analytics Academy.</p>
+        <a href="team.html" class="btn btn-secondary">Get Introduced</a>
+      </div>
+    </div>
+  </section>
   </main>
 
-  <footer>
-    <p>© 2025 Analytics Academy | Built for lifelong learners</p>
-  </footer>
 
-  <div id="login-container" class="login-container" style="display: none;">
-  <h2>Login</h2>
-  <form id="login-form">
-    <input type="text" id="username" placeholder="Username" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button type="submit">Log In</button>
-  </form>
-  <p id="login-message"></p>
-</div>
+<footer class="site-footer">
+  © 2025 Analytics Academy — Built for lifelong learners
+</footer>
+  <script>
+    // Toggle login box on click
+    document.querySelector("a[href='#login']").addEventListener("click", function (e) {
+      e.preventDefault();
+      const loginBox = document.getElementById("login-container");
+      loginBox.style.display = loginBox.style.display === "none" ? "block" : "none";
+    });
 
-<script>
-  // Toggle login box on click
-  document.querySelector("a[href='#login']").addEventListener("click", function (e) {
-    e.preventDefault();
-    const loginBox = document.getElementById("login-container");
-    loginBox.style.display = loginBox.style.display === "none" ? "block" : "none";
-  });
+    // Handle form submission
+    document.getElementById("login-form").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-  // Handle form submission
-  document.getElementById("login-form").addEventListener("submit", function (e) {
-    e.preventDefault();
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+      const message = document.getElementById("login-message");
 
-    const user = document.getElementById("username").value;
-    const pass = document.getElementById("password").value;
-    const message = document.getElementById("login-message");
+      if (user === "student" && pass === "academy123") {
+        message.style.color = "green";
+        message.textContent = "Login successful! Redirecting...";
+        setTimeout(() => {
+          window.location.href = "dashboard.html";
+        }, 1000);
+      } else {
+        message.style.color = "red";
+        message.textContent = "Invalid username or password.";
+      }
+    });
+  </script>
 
-    if (user === "student" && pass === "academy123") {
-      message.style.color = "green";
-      message.textContent = "Login successful! Redirecting...";
-      setTimeout(() => {
-        window.location.href = "dashboard.html";
-      }, 1000);
-    } else {
-      message.style.color = "red";
-      message.textContent = "Invalid username or password.";
+</body>
+
+
+
+  <script>
+    // Toggle panels
+    const loginPanel  = document.getElementById('login-container');
+    const signupPanel = document.getElementById('signup-container');
+
+    document
+      .getElementById('create-account-btn')
+      .addEventListener('click', () => {
+        loginPanel.style.display  = 'none';
+        signupPanel.style.display = 'block';
+        clearMessages();
+      });
+
+    document
+      .getElementById('back-to-login-btn')
+      .addEventListener('click', () => {
+        signupPanel.style.display = 'none';
+        loginPanel.style.display  = 'block';
+        clearMessages();
+      });
+
+    // Signup form handler…
+    document.getElementById('signup-form')
+      .addEventListener('submit', function(e) {
+        /* … your signup logic … */
+      });
+
+    function clearMessages() {
+      document.getElementById('signup-message').textContent = '';
+      document.getElementById('login-message').textContent  = '';
     }
-  });
-</script>
-
-
+  </script>
+<script src="auth.js"></script>
 </body>
 </html>

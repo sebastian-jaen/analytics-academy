@@ -22,8 +22,16 @@
       "content": "Charts and visualizations help reveal patterns and outliers that numbers alone may miss:<pre><code><span class='keyword'>import</span> matplotlib.pyplot <span class='keyword'>as</span> plt\n\n<span class='comment'># Line chart of monthly sales</span>\ndf[<span class='string'>\"sales\"</span>].plot(title=<span class='string'>\"Monthly Sales\"</span>)\nplt.ylabel(<span class='string'>\"Sales\"</span>)\nplt.show()\n\n<span class='comment'># Histogram of prices</span>\ndf[<span class='string'>\"price\"</span>].hist(bins=10)\nplt.title(<span class='string'>\"Price Distribution\"</span>)\nplt.xlabel(<span class='string'>\"Price\"</span>)\nplt.show()</code></pre>"
     },
     {
-        "heading": "Download Practice Files",
-        "content": "<p>To practice what you've learned, download the files below:</p><ul><li><a href='https://github.com/sebastian-jaen/analytics-academy/raw/main/data/sales.csv' target='_blank'>📄 Download sample dataset (sales.csv)</a></li><li><a href='https://github.com/sebastian-jaen/analytics-academy/raw/main/notebooks/eda_starter.ipynb' target='_blank'>📓 Download starter Jupyter notebook (eda_starter.ipynb)</a></li></ul>"
+      "heading": "Download Practice Files",
+      "content": "<p>To practice what you've learned, download the files below:</p><ul><li><a href=\"assets/data/sales.csv\" download>📄 Download sample dataset (sales.csv)</a></li><li><a href=\"assets/notebooks/eda_starter.ipynb\" download>📓 Download starter Jupyter notebook (eda_starter.ipynb)</a></li></ul>"
+    },
+    {
+      "heading": "Key EDA Metrics & Definitions",
+      "content": "<table><thead><tr><th>Metric</th><th>Definition</th><th>Why It’s Useful</th></tr></thead><tbody><tr><td><strong>Count (n)</strong></td><td>Total non-missing observations in a column</td><td>Shows dataset size & completeness</td></tr><tr><td><strong>Unique values</strong></td><td>Number of distinct entries</td><td>Gauges cardinality & highlights high-cardinality features</td></tr><tr><td><strong>Missing values (%)</strong></td><td>Count & % of null/NaN entries</td><td>Reveals data gaps and guides imputation or exclusion</td></tr><tr><td><strong>Mean / Median / Mode</strong></td><td>Central-tendency measures (average, middle, most frequent)</td><td>Summarizes typical value; median is robust to outliers</td></tr><tr><td><strong>Standard Deviation (σ)</strong></td><td>Square root of variance</td><td>Dispersion in original units</td></tr><tr><td><strong>Interquartile Range (IQR)</strong></td><td>Q3 − Q1 (middle 50% spread)</td><td>Helps detect outliers</td></tr><tr><td><strong>Skewness / Kurtosis</strong></td><td>Asymmetry / tailedness of distribution</td><td>Flags non-normal shape and potential extreme values</td></tr><tr><td><strong>Correlation (r)</strong></td><td>Pearson’s coefficient between two numeric variables</td><td>Identifies linear relationships</td></tr><tr><td><strong>Frequency Distribution</strong></td><td>Counts or %s per category for categorical variables</td><td>Summarizes category prevalence</td></tr></tbody></table>"
+    },
+    {
+      "heading": "Common EDA Visualizations",
+      "content": "<ul><li><strong>Histograms:</strong> Show frequency distribution of a single variable</li><li><strong>Box Plots:</strong> Visualize median, quartiles, and outliers</li><li><strong>Scatter Plots:</strong> Show relationships between two numeric variables</li><li><strong>Heatmaps:</strong> Display correlation matrices</li></ul>"
     },
     {
       "heading": "Common EDA Patterns to Watch For",
