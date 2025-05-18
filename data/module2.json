@@ -11,15 +11,19 @@
     },
     {
       "heading": "Loading and Exploring a Dataset",
-      "content": "Start your analysis by loading the dataset and previewing its structure:<pre><code class='language-python'>import pandas as pd\n\ndf = pd.read_csv(\"sales.csv\")\nprint(df.head())</code></pre><p>This loads a dataset and shows the first 5 rows so you can get a quick glance at the data structure.</p>"
+      "content": "Start your analysis by loading the dataset and previewing its structure:<pre><code><span class='keyword'>import</span> pandas <span class='keyword'>as</span> pd\n\ndf = pd.read_csv(<span class='string'>\"sales.csv\"</span>)\n<span class='function'>print</span>(df.head())</code></pre><p>This loads a dataset and shows the first 5 rows so you can get a quick glance at the data structure.</p>"
     },
     {
       "heading": "Basic EDA Calculations",
-      "content": "Once your dataset is loaded, you can perform basic calculations to understand it:<pre><code class='language-python'>print(df.describe())\nprint(\"Missing values:\\n\", df.isnull().sum())\nprint(\"Mean price:\", df[\"price\"].mean())\nprint(\"Median price:\", df[\"price\"].median())\nprint(\"Mode of category:\", df[\"category\"].mode()[0])\nprint(\"Standard deviation:\", df[\"price\"].std())\nprint(\"Min:\", df[\"price\"].min(), \"Max:\", df[\"price\"].max())\nprint(\"Unique categories:\", df[\"category\"].nunique())</code></pre>"
+      "content": "Once your dataset is loaded, you can perform basic calculations to understand it:<pre><code><span class='function'>print</span>(df.describe())\n<span class='function'>print</span>(<span class='string'>\"Missing values:\\n\"</span>, df.isnull().sum())\n<span class='function'>print</span>(<span class='string'>\"Mean price:\"</span>, df[<span class='string'>\"price\"</span>].mean())\n<span class='function'>print</span>(<span class='string'>\"Median price:\"</span>, df[<span class='string'>\"price\"</span>].median())\n<span class='function'>print</span>(<span class='string'>\"Mode of category:\"</span>, df[<span class='string'>\"category\"</span>].mode()[0])\n<span class='function'>print</span>(<span class='string'>\"Standard deviation:\"</span>, df[<span class='string'>\"price\"</span>].std())\n<span class='function'>print</span>(<span class='string'>\"Min:\"</span>, df[<span class='string'>\"price\"</span>].min(), <span class='string'>\"Max:\"</span>, df[<span class='string'>\"price\"</span>].max())\n<span class='function'>print</span>(<span class='string'>\"Unique categories:\"</span>, df[<span class='string'>\"category\"</span>].nunique())</code></pre>"
     },
     {
       "heading": "Visual EDA with Matplotlib",
-      "content": "Charts and visualizations help reveal patterns and outliers that numbers alone may miss:<pre><code class='language-python'>import matplotlib.pyplot as plt\n\n# Line chart of monthly sales\ndf[\"sales\"].plot(title=\"Monthly Sales\")\nplt.ylabel(\"Sales\")\nplt.show()\n\n# Histogram of prices\ndf[\"price\"].hist(bins=10)\nplt.title(\"Price Distribution\")\nplt.xlabel(\"Price\")\nplt.show()</code></pre>"
+      "content": "Charts and visualizations help reveal patterns and outliers that numbers alone may miss:<pre><code><span class='keyword'>import</span> matplotlib.pyplot <span class='keyword'>as</span> plt\n\n<span class='comment'># Line chart of monthly sales</span>\ndf[<span class='string'>\"sales\"</span>].plot(title=<span class='string'>\"Monthly Sales\"</span>)\nplt.ylabel(<span class='string'>\"Sales\"</span>)\nplt.show()\n\n<span class='comment'># Histogram of prices</span>\ndf[<span class='string'>\"price\"</span>].hist(bins=10)\nplt.title(<span class='string'>\"Price Distribution\"</span>)\nplt.xlabel(<span class='string'>\"Price\"</span>)\nplt.show()</code></pre>"
+    },
+    {
+        "heading": "Download Practice Files",
+        "content": "<p>To practice what you've learned, download the files below:</p><ul><li><a href='https://github.com/sebastian-jaen/analytics-academy/raw/main/data/sales.csv' target='_blank'>📄 Download sample dataset (sales.csv)</a></li><li><a href='https://github.com/sebastian-jaen/analytics-academy/raw/main/notebooks/eda_starter.ipynb' target='_blank'>📓 Download starter Jupyter notebook (eda_starter.ipynb)</a></li></ul>"
     },
     {
       "heading": "Common EDA Patterns to Watch For",

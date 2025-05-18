@@ -51,3 +51,102 @@ footer {
   padding: 10px;
   font-size: 0.9em;
 }
+.callout {
+  border-left: 5px solid #007acc;
+  background-color: #eef7ff;
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.module-section h4 {
+  margin-top: 25px;
+  color: #007acc;
+}
+.toc-link {
+  display: block;          /* ⬅️ This is the key line */
+  margin-bottom: 10px;
+  color: #007acc;
+  text-decoration: none;
+}
+
+.toc-link:hover {
+  text-decoration: underline;
+}
+
+.toc-sidebar {
+  width: 250px;
+  position: sticky;
+  top: 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+pre code {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
+  padding: 10px 14px;         /* 🔹 reduce padding */
+  display: block;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;          /* 🔹 slightly smaller font */
+  overflow-x: auto;
+  line-height: 1.4;           /* 🔹 tighter spacing */
+  max-width: 100%;            /* 🔹 ensures it doesn't overflow */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+pre code span.keyword {
+  color: #569cd6;
+  font-weight: bold;
+}
+pre code span.function {
+  color: #dcdcaa;
+}
+pre code span.string {
+  color: #ce9178;
+}
+pre code span.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+pre code {
+  max-width: 700px;
+}
+.login-container {
+  width: 300px;
+  margin: 30px auto;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.login-container input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-container button {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#login-message {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

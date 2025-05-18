@@ -1,0 +1,21 @@
+{
+  "title": "Module 1: Introduction to Analytics",
+  "sections": [
+    {
+      "heading": "What is Business Analytics?",
+      "content": "Business analytics is the process of using data, statistical analysis, and modeling to drive business decision-making. It helps organizations understand trends, predict outcomes, and improve performance."
+    },
+    {
+      "heading": "Use Cases of Analytics in Business",
+      "content": "<ul><li>Identifying customer preferences</li><li>Optimizing marketing campaigns</li><li>Forecasting sales</li><li>Improving operational efficiency</li><li>Reducing churn</li><li>Enhancing inventory and supply chain planning</li></ul><div class='callout info'>Analytics transforms raw data into strategic insights.</div>"
+    },
+    {
+      "heading": "Types of Analytics",
+      "content": "<ul><li><strong>Descriptive:</strong> What happened?</li><li><strong>Diagnostic:</strong> Why did it happen?</li><li><strong>Predictive:</strong> What will happen?</li><li><strong>Prescriptive:</strong> What should we do?</li></ul>"
+    },
+    {
+      "heading": "Benefits of Analytics Over Experience",
+      "content": "<ul><li><strong>Objectivity:</strong> Data is evidence-based</li><li><strong>Scale:</strong> Can analyze massive datasets</li><li><strong>Precision:</strong> Reduces guesswork</li></ul><h4>Reflection</h4><p>Think of a decision you’ve made based only on experience. What would you do differently with data?</p>"
+    }
+  ]
+}
